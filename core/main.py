@@ -1,9 +1,9 @@
-import os
+from decouple import config
 
 import telebot
 from telebot import types
 
-API_TOKEN = os.environ.get("API_TOKEN")
+API_TOKEN = config("API_TOKEN")
 bot = telebot.TeleBot(API_TOKEN)
 
 user_data = {}
